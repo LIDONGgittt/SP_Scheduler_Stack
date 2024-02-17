@@ -25,7 +25,7 @@ yolov3Segment::yolov3Segment() {
 
     // Load the network
     net = readNetFromDarknet(modelConfiguration, modelWeights);
-    net.setPreferableBackend(DNN_BACKEND_OPENCV);
+    net.setPreferableBackend(0);
     net.setPreferableTarget(DNN_TARGET_CPU);
 }
 

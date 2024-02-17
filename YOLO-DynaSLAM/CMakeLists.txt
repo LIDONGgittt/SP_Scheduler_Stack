@@ -120,7 +120,7 @@ ${EIGEN3_LIBS}
 ${Pangolin_LIBRARIES}
 ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so
 ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so
-/usr/lib/x86_64-linux-gnu/libpython2.7.so
+/lib/aarch64-linux-gnu/libpython2.7.so
 ${Boost_LIBRARIES}
 )
 
