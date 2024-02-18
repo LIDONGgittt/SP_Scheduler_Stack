@@ -32,15 +32,17 @@ endif()
 
 LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
 
+
+include_directories(/home/zephyr/Library/opencv/build/include)
 message("PROJECT_SOURCE_DIR: " ${OpenCV_DIR})
-find_package(OpenCV 2.4.11 QUIET)
-if(NOT OpenCV_FOUND)
-    message("OpenCV > 2.4.11 not found.")
-    find_package(OpenCV 3.0 QUIET)
-    if(NOT OpenCV_FOUND)
-        message(FATAL_ERROR "OpenCV > 3.0 not found.")
-    endif()
-endif()
+find_package(OpenCV 4.0 REQUIRED)
+# if(NOT OpenCV_FOUND)
+#     message("OpenCV > 2.4.11 not found.")
+#     find_package(OpenCV 3.0 QUIET PATHS /home/zephyr/Library/opencv/build/include)
+#     if(NOT OpenCV_FOUND)
+#         message(FATAL_ERROR "OpenCV > 3.0 not found.")
+#     endif()
+# endif()
 
 #find_package(OpenCV 3.0 QUIET)
 #if(NOT OpenCV_FOUND)
@@ -72,6 +74,8 @@ if(Boost_FOUND)
 endif()
 
 find_package(Eigen3 3.1.0 REQUIRED)
+
+include_directories(/home/zephyr/Library/Pangolin/build/include)
 find_package(Pangolin REQUIRED)
 
 set(PYTHON_INCLUDE_DIRS ${PYTHON_INCLUDE_DIRS} /usr/local/lib/python2.7/dist-packages/numpy/core/include/numpy)
