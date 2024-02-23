@@ -1,0 +1,6 @@
+./YOLO-DynaSLAM/Examples/RGB-D/rgbd_tum_yolo ./YOLO-DynaSLAM/Vocabulary/ORBvoc.txt \
+    ./YOLO-DynaSLAM/Examples/RGB-D/TUM3.yaml ./dataset/rgbd_dataset_freiburg3_walking_xyz/ \
+    ./YOLO-DynaSLAM/Examples/RGB-D/associations/fr3_walking_xyz.txt
+
+# show pid, tid and priority
+ps -em -o pid,tid,policy,pri,ni,rtprio,comm,psr --sort=+rtprio

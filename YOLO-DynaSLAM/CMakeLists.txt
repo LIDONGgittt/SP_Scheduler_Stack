@@ -136,6 +136,10 @@ add_executable(rgbd_tum_yolo
 Examples/RGB-D/rgbd_tum_yolo.cc)
 target_link_libraries(rgbd_tum_yolo ${PROJECT_NAME})
 
+add_executable(dynaslam_wrapper
+Examples/RGB-D/dynaslam_wrapper.cpp)
+target_link_libraries(dynaslam_wrapper ${PROJECT_NAME})
+
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/Stereo)
 
 add_executable(stereo_kitti
@@ -159,4 +163,5 @@ target_link_libraries(mono_kitti ${PROJECT_NAME})
 #add_executable(mono_carla
 #Examples/Monocular/mono_carla.cc)
 #target_link_libraries(mono_carla ${PROJECT_NAME})
+
 

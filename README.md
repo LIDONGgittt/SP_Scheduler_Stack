@@ -20,3 +20,11 @@ Software stack for experiments of computation-aware scheduling and SP metric
     - Build the target:
       1. Build and install [Pangolin](https://github.com/stevenlovegrove/Pangolin), need the specific version: v0.6 (clone and `git checkout v0.6`)
       2. Follow the readme in the original repo, but with the modified source code in this repo.
+    - Execute runnable:
+      `./YOLO-DynaSLAM/Examples/RGB-D/rgbd_tum_yolo ./YOLO-DynaSLAM/Vocabulary/ORBvoc.txt ./YOLO-DynaSLAM/Examples/RGB-D/TUM3.yaml ./dataset/rgbd_dataset_freiburg3_walking_xyz/ ./YOLO-DynaSLAM/Examples/RGB-D/associations/fr3_walking_xyz.txt`
+
+
+## Problems
+1. If `chrt` coudn't change priority:
+    - execute: `sysctl -w kernel.sched_rt_runtime_us=-1`
+2. 
