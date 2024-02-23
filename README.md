@@ -22,6 +22,20 @@ Software stack for experiments of computation-aware scheduling and SP metric
       2. Follow the readme in the original repo, but with the modified source code in this repo.
     - Execute runnable:
       `./YOLO-DynaSLAM/Examples/RGB-D/rgbd_tum_yolo ./YOLO-DynaSLAM/Vocabulary/ORBvoc.txt ./YOLO-DynaSLAM/Examples/RGB-D/TUM3.yaml ./dataset/rgbd_dataset_freiburg3_walking_xyz/ ./YOLO-DynaSLAM/Examples/RGB-D/associations/fr3_walking_xyz.txt`
+    - ROS2 Foxy wrapper: the directory named dynaslam
+      - Require a locally built dynaSLAM library (libDynaSLAM): this is linked by hard code path in the CMakeLists.txt, make sure the DynaSLAM is built locally
+      - Set ld path to find the shared library: `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/nvidia/workspace/sdcard/SP_Scheduler_Stack/YOLO-DynaSLAM/lib`
+      - Usage: refer to dynaslam_demo node
+1. RRT
+    - RRT wrapper for ROS2 Foxy: the directory named rrt_solver
+      - Adapted from [https://github.com/nikhilchandak/Rapidly-Exploring-Random-Trees](https://github.com/nikhilchandak/Rapidly-Exploring-Random-Trees).
+    - Required: 
+      - C++ 11+ and SFML (Simple and Fast Multimedia Library)
+      - Install DFML: `sudo apt-get install libsfml-dev`
+    - RRT demo nodes:
+      - rrt_demo_withoutGUI: find a path using RRT and exit immediatelly.
+      - rrt_demo_withGUI: show the searching process of RRT, will not automaticly exit.
+
 
 
 ## Problems
