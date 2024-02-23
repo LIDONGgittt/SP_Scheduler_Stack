@@ -67,13 +67,13 @@ include_directories(
   ${Boost_INCLUDE_DIRS}
 )
 
-add_executable(dynaslam_listerner src/dynaslam_listerner.cpp)
+add_executable(dynaslam_demo src/dynaslam_demo.cpp)
 
-target_include_directories(dynaslam_listerner PUBLIC
+target_include_directories(dynaslam_demo PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>)
 
-target_link_libraries(dynaslam_listerner 
+target_link_libraries(dynaslam_demo 
   ${DYNASLAM_PROJ_DIR}/lib/libDynaSLAM.so
   ${OpenCV_LIBS}
   ${EIGEN3_LIBS}
@@ -84,7 +84,7 @@ target_link_libraries(dynaslam_listerner
   ${Boost_LIBRARIES}
 )
 
-install(TARGETS dynaslam_listerner
+install(TARGETS dynaslam_demo
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
